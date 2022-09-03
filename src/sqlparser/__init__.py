@@ -1,3 +1,4 @@
+from .generated import *
 from .internalparser import SqlSyntaxError
 from .stringparser import string_to_ast
 from .parsing import parse_sql, \

@@ -1,5 +1,4 @@
 build/
 dist/
 **/__pycache__/
-src/sqlparser/generated/
-src/sqlparser.egg-info/
+*.egg-info/

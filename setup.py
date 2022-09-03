@@ -1,7 +1,5 @@
 from setuptools import setup
-
 from setuptools.command.build_py import build_py
-
 from generate_grammar import generate_grammar
 
 
