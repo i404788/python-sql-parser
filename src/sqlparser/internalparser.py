@@ -5,8 +5,10 @@ from antlr4.error.ErrorListener import ErrorListener
 from antlr4.error.ErrorStrategy import BailErrorStrategy
 from antlr4.error.Errors import ParseCancellationException
 
-from sqlparser.generated.SqlBaseLexer import SqlBaseLexer
-from sqlparser.generated.SqlBaseParser import SqlBaseParser
+#from sqlparser.generated.SqlBaseLexer import SqlBaseLexer
+#from sqlparser.generated.SqlBaseParser import SqlBaseParser
+from sqlparser.generated.MySqlLexer import MySqlLexer as SqlBaseLexer
+from sqlparser.generated.MySqlParser import MySqlParser as SqlBaseParser
 
 
 class RemoveIdentifierBackticks(antlr4.ParseTreeListener):

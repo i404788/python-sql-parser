@@ -14,10 +14,17 @@ def generate_grammar():
             "\n"
             "Once downloaded, you can set your Java classpath using: \n"
             "export CLASSPATH=<path_of_the_download_folder>/antlr-4.7.1-complete.jar\n"
-        )
+        )    
     generation_failed = subprocess.call(
         "java org.antlr.v4.Tool "
-        "$(pwd)/src/sqlparser/grammar/SqlBase.g4 "
+        "$(pwd)/src/sqlparser/grammar/MySqlLexer.g4 "#SqlBase.g4 "
+        "-o $(pwd)/src/sqlparser/generated/ "
+        "-Dlanguage=Python3",
+        shell=True
+    )
+    generation_failed = subprocess.call(
+        "java org.antlr.v4.Tool "
+        "$(pwd)/src/sqlparser/grammar/MySqlParser.g4 "#SqlBase.g4 "
         "-o $(pwd)/src/sqlparser/generated/ "
         "-Dlanguage=Python3",
         shell=True

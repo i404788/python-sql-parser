@@ -7,7 +7,8 @@ def parse_sql(string, rule, converter, debug=False):
 
 
 def parse_statement(string, converter=None, debug=False):
-    return parse_sql(string, 'singleStatement', converter, debug)
+    return parse_sql(string, 'sqlStatement', converter, debug)
+    #return parse_sql(string, 'singleStatement', converter, debug)
 
 
 def parse_expression(string, converter=None, debug=False):
